@@ -3,37 +3,37 @@
     {
       "image": {
         "src": "/carousel/potensi/img-1.jpeg",
-        "alt": "Image 1"
+        "alt": "potensi-image-1"
       }
     },
     {
       "image": {
         "src": "/carousel/potensi/img-2.jpeg",
-        "alt": "Image 2"
+        "alt": "potensi-image-2"
       }
     },
     {
       "image": {
         "src": "/carousel/potensi/img-3.jpeg",
-        "alt": "Image 3"
+        "alt": "potensi-image-3"
       }
     },
     {
       "image": {
         "src": "/carousel/potensi/img-4.jpeg",
-        "alt": "Image 4"
+        "alt": "potensi-image-4"
       }
     },
     {
       "image": {
         "src": "/carousel/potensi/img-5.jpeg",
-        "alt": "Image 5"
+        "alt": "potensi-image-5"
       }
     },
     {
       "image": {
         "src": "/carousel/potensi/img-6.jpeg",
-        "alt": "Image 6"
+        "alt": "potensi-image-6"
       }
     }
   ]

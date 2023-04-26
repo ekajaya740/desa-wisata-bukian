@@ -1,11 +1,16 @@
+import { IFooter } from '@/interfaces/footer';
+import classNames from 'classnames';
 import Link from 'next/link';
 import { memo } from 'react';
 import { RiInstagramFill, RiWhatsappFill } from 'react-icons/ri';
 
-const Footer = () => {
+const Footer = (props: IFooter) => {
   return (
-    <footer className='bg-primary text-base-100 mt-10'>
-      <div className='container mx-auto py-10 flex justify-between'>
+    <footer
+      className={classNames(
+        `bg-primary text-base-100 mt-10 ${props.className}`
+      )}>
+      <div className='container mx-auto py-10 px-3 md:px-0 flex space-y-3 flex-col md:flex-row md:space-y-0 justify-around'>
         <div className='space-y-2 basis-1/2'>
           <h2
             className='
@@ -15,7 +20,7 @@ const Footer = () => {
             Profil
           </h2>
           <div className='space-y-1'>
-            <h3 className='text-md font-medium'>
+            <h3 className='text-md font-semibold'>
               Desa Bukian - Kecamatan Payangan - Kabupaten Gianyar - Bali
             </h3>
             <p className='text-sm'>

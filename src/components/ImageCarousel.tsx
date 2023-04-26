@@ -11,17 +11,16 @@ const ImageCarousel = (props: IImageCarousel) => {
       current === props['carousel'].length - 1 ? 0 : current + 1
     );
   };
+
   const prev = () => {
     setCurrent((current) =>
       current === 0 ? props['carousel'].length - 1 : current - 1
     );
   };
 
-  console.log(current);
-
   return (
     <>
-      <div className='relative '>
+      <div className='relative'>
         <div
           className={`carousel max-w-full h-[600px] -translate-x-[${
             current * 100
@@ -29,13 +28,14 @@ const ImageCarousel = (props: IImageCarousel) => {
           {props['carousel'].map((item, index) => {
             return (
               <div
-                id={`slide-${index}`}
+                id={`slide-${item.image.alt}-${index}`}
                 key={index}
-                className={`carousel-item w-full `}>
+                className={`carousel-item w-full`}>
                 <Image
                   src={item.image.src}
                   alt={item.image.alt}
-                  className='w-full object-fill'
+                  className='w-full md:object-fill object-cover'
+                  priority={index === 0 ? true : false}
                   height={5000}
                   width={5000}
                 />
@@ -45,10 +45,14 @@ const ImageCarousel = (props: IImageCarousel) => {
         </div>
         <div className='absolute w-full top-1/2 transform px-10'>
           <div className='flex justify-between'>
-            <a onClick={prev} href={`#slide-${current}`}>
+            <a
+              onClick={prev}
+              href={`#slide-${props.carousel[current].image.alt}-${current}`}>
               <FaChevronCircleLeft className='text-4xl text-secondary bg-base-100 rounded-full ' />
             </a>
-            <a onClick={next} href={`#slide-${current}`}>
+            <a
+              onClick={next}
+              href={`#slide-${props.carousel[current].image.alt}-${current}`}>
               <FaChevronCircleRight className='text-4xl text-secondary bg-base-100 rounded-full ' />
             </a>
           </div>
