@@ -30,7 +30,12 @@ export default function Index() {
 
   if (error) return <div>Failed to load</div>;
 
-  if (!data) return <div>Loading...</div>;
+  if (!data)
+    return (
+      <div className='w-screen h-screen flex justify-center items-center bg-red-50'>
+        <div className='animate-ping w-24 h-24 bg-primary rounded-full'></div>
+      </div>
+    );
 
   return (
     <Layout
