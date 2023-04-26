@@ -10,8 +10,8 @@ const Footer = (props: IFooter) => {
       className={classNames(
         `bg-primary text-base-100 mt-10 ${props.className}`
       )}>
-      <div className='container mx-auto py-10 px-3 md:px-0 flex space-y-3 flex-col md:flex-row md:space-y-0 justify-around'>
-        <div className='space-y-2 basis-1/2'>
+      <div className='container mx-auto py-10 px-3 md:px-0 flex space-y-3 flex-col md:flex-row md:space-y-0 justify-between'>
+        <div className='space-y-2 md:basis-1/2'>
           <h2
             className='
             text-2xl
@@ -34,7 +34,7 @@ const Footer = (props: IFooter) => {
             </p>
           </div>
         </div>
-        <div className='space-y-2'>
+        <div className='space-y-2 md:basis-1/4'>
           <h2 className='text-2xl font-bold'>Kontak Kami</h2>
           <ul className='space-y-1 text-md'>
             <li className='flex items-center space-x-1'>
