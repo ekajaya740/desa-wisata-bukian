@@ -24,7 +24,7 @@ const Navbar = (props: INavbar) => {
             {props.menu.map((item, index) => (
               <li
                 key={index}
-                className={`font-bold ${
+                className={`font-bold hover:underline ${
                   props.activeSection === index
                     ? 'text-primary'
                     : 'text-secondary'
@@ -57,7 +57,12 @@ const Navbar = (props: INavbar) => {
             {props.menu.map((item, index) => (
               <li
                 key={index}
-                className={`py-3 active:text-primary text-secondary`}>
+                className={`py-3 hover:underline ${
+                  props.activeSection === index
+                    ? 'text-primary'
+                    : 'text-secondary'
+                }
+            }`}>
                 <a href={item.link}>{item.name}</a>
               </li>
             ))}
